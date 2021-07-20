@@ -1,0 +1,188 @@
+/*
+  Name: Abraham Mejia
+  Date: July 18 2021
+  Assignment Name: LIVE! Bait
+
+
+  File name: style.css
+*/
+
+:root{
+  --light: #bcd3e9;
+  --medium: #7dacd8;
+  --dark: #003f88;
+  --lightblue: #37b8f0;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+html{
+  box-sizing: border-box;
+  color: var(--dark);
+}
+
+header img{
+  max-width: 100%;
+}
+header nav{
+  display: grid;
+  grid-gap: 20px;
+
+}
+nav ul{
+  display: grid;
+  grid-gap: 20px;
+  list-style: none;
+  padding: 0px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+nav a{
+  background: var(--dark);
+  display: block;
+  text-decoration: none;
+  padding: .6rem;
+  padding-right: .1rem;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+nav a:hover{
+  background: var(--lightblue);
+  color: var(--light);
+}
+
+body{
+  background-color: var(--light);
+  margin: 30px 50px;
+  line-height: 1.4;
+}
+
+img{
+  max-width: 100%;
+}
+
+footer{
+  background-color: var(--dark);
+  color: white;
+  color: rgba(255, 255, 255, 0.6);
+  font: normal small-caps bold 0.9em/3em
+         Helvetica, sans-serif;
+  text-align: center;
+}
+.home{
+  background: var(--medium);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-gap: 30px;
+  padding: 3em;
+  grid-template-columns: repeat(2, 1fr);
+}
+.title h1{
+  text-align: center;
+  font-size: 2rem;
+  display: block;
+  background-color: var(--dark);
+  box-shadow: var(--shadow);
+  color: white;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+}
+.services
+{
+  background: var(--medium);
+  box-shadow: var(--shadow);
+  color: white;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  padding: 20px 30px;
+  text-align: center;
+}
+.services p{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.articles{
+  display: grid;
+  grid-template-areas:
+    'live-bait live-fish'
+    'cold-bait live-fish'
+}
+.live-bait, .live-fish, .cold-bait{
+  background: var(--medium);
+  box-shadow: var(--shadow);
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 0px;
+}
+h3{
+  text-align: center;
+  font-size: 2rem;
+  display: block;
+  background-color: var(--medium);
+  box-shadow: var(--shadow);
+  color: white;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+}
+
+
+.BaitType, .BaitPrice{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.box img{
+  width: 100%;
+  height: 11rem;
+  box-shadow: var(--shadow);
+}
+.containers{
+  background: var(--medium);
+  box-shadow: var(--shadow);
+  display: grid;
+  text-align:center;
+  padding:10px;
+  grid-gap: 0px;
+  grid-template-areas:
+    'contact  social';
+}
+.contact, .social img{
+  max-width: 60%;
+}
+.text{
+  text-align: center;
+}
+.video p{
+  font-size: 1.2em;
+}
+
+
+@media screen and (max-width: 700px){
+  nav ul{
+    grid-template-columns: 1fr;
+  }
+  .home{
+    grid-template-columns: 1fr;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  .containers{
+    align-items:center;
+    grid-template-areas:
+      'contact'
+      'social';
+  }
+  .articles{
+    display: grid;
+    grid-template-areas:
+      'live-bait'
+      'cold-bait'
+      'live-fish';
+    }
+}
